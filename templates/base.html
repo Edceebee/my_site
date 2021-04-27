@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base file</title>
+</head>
+<style>
+    #nav-bar{
+        display: flex;
+        background: darkgrey;
+    }
+    #logo{
+        width: 90%;
+        padding-left: 1rem;
+    }
+    #ref-page{
+        padding-top: 1.5rem;
+        display: flex;
+        width: 15%;
+        align-items: center;
+        justify-content: space-around;
+        background: aquamarine;
+    }
+    #ref-page a{
+        text-decoration: none;
+        color: black;
+    }
+
+    #ref-page a:hover{
+        color: rebeccapurple;
+    }
+
+
+</style>
+<body>
+    <div id="container">
+        <div id="nav-bar">
+            <div id="logo">
+                <h1>Class logo</h1>
+            </div>
+
+            <div id="ref-page">
+                <a href="base.html"> Home</a>
+                <a href="../polls/templates/polls/questionaire.html">Questionaire</a>
+                <a href="../polls/templates/polls/about.html">About</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+{% block content %}
+{% endblock content %}

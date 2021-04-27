@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <ol>
+
+    {% for question in questions %}
+        <li>
+            <p>{{ question.question_text }} </p>
+            <ol>
+                {% for choice in question.choice_set.all %}
+
+                <l1>{{ choice.choice_text }}</l1>
+<!--                {% endfor %}-->
+            </ol>
+        </li>
+        {% endfor %}
+
+    </ol>
+
+
+</body>
+</html>
+
+{% endblock content %}
