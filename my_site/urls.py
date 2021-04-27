@@ -23,7 +23,7 @@ from polls.views import home_page, about_page, questionaire
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_page, name=''),
+    path('', home_page, name='home'),
     path('about/', about_page, name='about'),
     path('questionaire/', questionaire, name='questionaire')
 
