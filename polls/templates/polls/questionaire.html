@@ -1,6 +1,3 @@
-{% extends 'base.html' %}
-{% block content %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+{% extends 'base.html' %}
+{% block content %}
 
 
     <ol>
@@ -17,17 +16,15 @@
             <p>{{ question.question_text }} </p>
             <ol>
                 {% for choice in question.choice_set.all %}
-
-                <l1>{{ choice.choice_text }}</l1>
-<!--                {% endfor %}-->
+                <ol>{{ choice.choice_text }}</ol>
+                {% endfor %}
             </ol>
         </li>
         {% endfor %}
 
     </ol>
 
-
+{% endblock content %}
 </body>
 </html>
 
-{% endblock content %}
